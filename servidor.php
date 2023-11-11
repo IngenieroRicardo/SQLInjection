@@ -1,6 +1,6 @@
 <?php
 /*monstamos la base de datos*/
-shell_exec('mysql -u root </app/database.sql');
+shell_exec('mysql -u root < database.sql');
 /*conexion a la base de dato*/
 function conectar(){
 	$servidor = "localhost";

@@ -27,3 +27,12 @@ BEGIN
 	LIMIT 0, 5;
 END//
 DELIMITER ;
+
+
+CREATE DATABASE IF NOT EXISTS ApiRest;
+
+USE ApiRest;
+
+CREATE TABLE IF NOT EXISTS credenciales(usuarios VARCHAR(100) NOT NULL, passwords VARCHAR(100) NOT NULL)
+SELECT uniones.usuarios, uniones.passwords FROM
+((SELECT 'Admin' AS usuarios, '123456' AS passwords) UNION ALL (SELECT 'Invitado' AS usuarios, '654321' AS passwords)) AS uniones;
