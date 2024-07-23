@@ -3,7 +3,7 @@
 shell_exec('mysql -u root < database.sql');
 /*conexion a la base de dato*/
 function conectar(){
-	$servidor = "localhost";
+	$servidor = "127.0.0.1";
 	$usuario = "root";
 	$password = "";
 	$database = "chat";
