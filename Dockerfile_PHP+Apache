@@ -1,0 +1,15 @@
+FROM php:8.3.8-apache
+
+RUN apt-get upgrade
+
+RUN apt-get update  && docker-php-ext-install mysqli pdo pdo_mysql && docker-php-ext-enable pdo_mysql
+
+WORKDIR /var/www/html
+
+COPY cliente.js .
+COPY estilos.css .
+COPY index.html .
+COPY marco.png .
+COPY servidor.docker.php servidor.php
+
+EXPOSE 80
