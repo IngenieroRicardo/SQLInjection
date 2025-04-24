@@ -2,11 +2,13 @@
 
 Descargar y Montar el servidor con Docker:
 
+```bash
 git clone https://github.com/IngenieroRicardo/SQLInjection
 cd SQLInjection
 sudo chmod a+rwx *
 sudo docker-compose up
 firefox localhost:8080
+```
 
 <hr>
 
