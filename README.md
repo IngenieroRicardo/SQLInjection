@@ -1,12 +1,12 @@
 # SQL Injection
 
-Descargar y Montar el servidor desde Docker usando un volumen con el Codigo Fuente de Github para editarlo:
+Descargar y Montar el servidor con Docker:
 
-```bash
 git clone https://github.com/IngenieroRicardo/SQLInjection
-docker pull ghcr.io/ingenieroricardo/sqlinjection:latest
-docker run --publish 8080:80 -v ./SQLInjection:/app ghcr.io/ingenieroricardo/sqlinjection:latest
-```
+cd SQLInjection
+sudo chmod a+rwx *
+sudo docker-compose up
+firefox localhost:8080
 
 <hr>
 
