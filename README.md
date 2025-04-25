@@ -24,3 +24,5 @@ back-end DBMS operating system: Linux Ubuntu
 back-end DBMS: MySQL >= 5.0.12
 banner: '5.5.62-0ubuntu0.14.04.1-log'
 ```
+
+Imagen en dockerhub: https://hub.docker.com/repository/docker/ingenieroricardo/sqlinjection/general
